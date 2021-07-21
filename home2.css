@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.nav{
+    display: none;
+}
+.box{
+    background-image: url("mountain.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.landing{
+    width: 80%;
+    padding-bottom: 20px;
+}
+
+.landcontent{
+    width: 90%;
+    margin-top: 10%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landcontent img{
+    width: 70%;
+    border-radius: 130px;
+}
+.nume{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px
+}
+
+.landcontent h1{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.landcontent .nume h2{
+    font-size: 30px;
+    color: rgb(236, 33, 33);
+}
+
+.landcontent p{
+    color: white;
+    font-size: 25px;
+}
+
+.bio h2{
+    font-size: 25px;
+}
+
+.about{
+    width: 80%;
+}
+main .bio .img img{
+    width: 60%;
+}
+.about{
+    font-size: 25px;
+}
+
+.about button{
+    background-color: lightcoral;
+    padding: 10px 35px;
+    color: white;
+    font-size: 20px;
+}
+
+footer{
+    margin-top: 5%;
+    text-align: center;
+    background-color: lightgray;
+}
+
+
+@media (min-width: 720px) and (max-width:900px){
+    .details{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #mail{
+        font-size: 22px;
+    }
+}
+
+
+@media (min-width:900px){
+    .nav{
+        width: 60%;
+        display: block;
+        /* border: 2px solid red; */
+    }
+    .nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+    }
+    .nav ul li{
+        font-size: 30px;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .landcontent{
+        margin-top: 3%;
+    }
+
+
+    .landcontent img{
+        width: 40%;
+        border-radius: 130px;
+    }
+    .landcontent h1{
+
+        margin-bottom: 0px;
+    }
+    
+    .landcontent .nume h2{
+        margin-bottom: 0px;
+    }
+
+
+
+
+
+    .cutie{
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-template-areas: 
+        "img about";
+    }
+
+    .details{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #mail{
+        font-size: 22px;
+    }
+    main .bio .img img{
+        width: 90%;
+    }
+
+    .img{
+        grid-area: img;
+    }
+
+    .about{
+        grid-area:about;
+    }
+
+    footer{
+        margin-top: 5%;
+        text-align: center;
+        background-color: lightgray;
+    }
+}

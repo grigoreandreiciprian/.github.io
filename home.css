@@ -1,0 +1,94 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.nav{
+    display: none;
+}
+
+
+.landing{
+    width: 100%;
+    height: 80vh;
+    background-image: url("mountain.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landcontent{
+    width: 90%;
+    margin-top: 10%;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landcontent img{
+    width: 70%;
+    border-radius: 130px;
+}
+.nume{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:10px
+}
+
+.landcontent h1{
+    font-size: 30px;
+    color: white;
+    margin-bottom: 5%;
+}
+
+.landcontent .nume h2{
+    font-size: 30px;
+    color: rgb(236, 33, 33);
+}
+
+.landcontent p{
+    color: white;
+    font-size: 25px;
+}
+
+.about{
+    width: 100%;
+}
+.about img{
+    width: 60%;
+}
+.about{
+    font-size: 25px;
+}
+
+.about button{
+    background-color: lightcoral;
+    padding: 10px 35px;
+    color: white;
+    font-size: 20px;
+}
+
+
+@media (min-width: 720px) and (max-width:900px){
+    .details{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    #mail{
+        font-size: 22px;
+    }
+}
+
