@@ -91,7 +91,8 @@ footer{
     text-align: center;
     background-color: lightgray;
 }
-
+/* git config --global user.email "you@example.com"
+  git config --global user.name "Your Name" */
 
 @media (min-width: 720px) and (max-width:900px){
     .details{
