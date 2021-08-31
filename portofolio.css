@@ -9,12 +9,52 @@ main h1{
     margin-bottom: 10%;
  }
 
+ .box{
+     width: 90%;
+     display: block;
+     margin: auto;
+ }
+
 .images{
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
-   grid-gap:50px
+   grid-gap:20px;
+}
+
+.images a{
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
 }
 
 .images a img{
     width: 100%;
+    transition: transform .3s ease-in;
 }
+
+.overlay{
+    color: white;
+    background-color: rgba(0,0,0,.45);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* overflow: hidden; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s ease;
+    opacity: 0;
+    overflow: hidden;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+a:hover img{
+    transform: scale(1.2);
+}
+
