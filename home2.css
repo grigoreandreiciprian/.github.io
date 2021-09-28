@@ -163,6 +163,7 @@ footer{
   git config --global user.name "Your Name" */
 
 @media (min-width: 720px) and (max-width:900px){
+
     .details{
         width: 100%;
         display: grid;

@@ -1,0 +1,567 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #eee;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding: 0px;
+}
+
+.nav-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+
+
+.nav img{
+    width: 80%;
+    max-width: 400px;
+}
+.text {
+    text-align: center;
+}
+.nav .text h1{
+    margin: 10% 0px;
+}
+nav .text h3{
+    margin: 0px;
+}
+.text span{
+    color: red;
+}
+
+
+
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin: 0 3%;
+    transition: all .2s;
+    position: relative;
+}
+nav a:hover{
+    color: red;
+}
+
+nav a::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 10%;
+    background-color: red;
+    transition: all .6s;
+}
+nav a:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+
+
+/* Main */
+
+
+
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    background-color: #eee;
+}
+
+main h1{
+    margin: 10%
+}
+main h2{
+    text-align: left;
+    margin-left:2%;
+}
+
+
+.img img{
+    width: 80%;
+    max-width: 400px;
+}
+
+.about{
+    font-size: 18px;
+}
+
+
+
+.link{
+    overflow: hidden;
+}
+ .link a{
+    background-color: #363636;
+    padding: 20px 35px;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+}
+.link a:hover{
+    background-color: red;
+}
+
+.link a::before{
+    content: " ";
+    position: absolute;
+    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    transform: translateX(-100%) rotate(45deg);
+    transition: all .3s;
+}
+.link a:hover::before{
+    transform: translate(100%) rotate(45deg);
+}
+
+
+
+
+
+
+footer{
+    margin-top: 5%;
+    text-align: center;
+    background-color:black;
+    color: white;
+}
+
+
+
+@media (min-width:460px) and (max-width:720px){
+     
+    nav a{
+        font-size: 25px;
+    }
+
+
+    main h1{
+        margin: 5%;
+    }
+    
+    .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dreapta{
+        width: 45%;
+        margin:0 0 5% 5%;
+    }
+    .stanga{
+        width: 45%;
+        margin:0 5% 5% 0;
+    }
+    #mail{
+        font-size: 15px;
+    }
+}
+
+
+@media (min-width:720px) and (max-width:900px){
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: auto;
+        grid-template-areas: "nav main"
+        "nav footer";
+        grid-gap:20px;
+    }
+    .nav{
+        grid-area: nav;
+    }
+    main{
+        grid-area: main;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+    .nav{
+        background-color: #363636;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+       
+    }
+    .nav-content{
+        background-color:#363636;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    nav a{
+        margin-top:20% ;
+        font-size: 25px;
+        /* border: 2px solid red; */
+        /* padding: 5px 50px; */
+        width: 90%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text h3{
+        font-size: 20px;
+    }
+    .text h1{
+        font-size: 25px;
+    }
+
+
+
+    main h1{
+        display: none;
+    }
+    main h2{
+        text-align: center;
+    }
+
+
+    
+    .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dreapta{
+        width: 45%;
+        margin:0 0 5% 5%;
+    }
+    .stanga{
+        width: 45%;
+        margin:0 5% 5% 0;
+    }
+    #mail{
+        font-size: 15px;
+    }
+
+}
+
+
+@media (min-width:910px) and (max-width:1485px){
+
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: auto;
+        grid-template-areas: "nav main"
+        "nav footer";
+        /* grid-gap:20px; */
+    }
+    .nav{
+        grid-area: nav;
+    }
+    main{
+        grid-area: main;
+        margin-left: 2%;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+
+    .cutie{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "img about";
+        grid-gap:20px;
+    }
+
+    .img{
+        grid-area: img;
+    }
+
+    .about{
+        grid-area: about;
+        font-size: 22px;
+        padding-right: 100px;
+    }
+
+
+
+
+
+
+
+    .details{
+        font-size: 18px;
+    }
+    .dreapta #mail{
+        font-size: 18px;
+    }
+
+    .details h3{
+        margin-top: 10%;
+    }
+
+    .nav{
+        background-color: #363636;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+       
+    }
+    .nav-content{
+        background-color:#363636;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    nav a{
+        margin-top:20% ;
+        font-size: 25px;
+        /* border: 2px solid red; */
+        /* padding: 5px 50px; */
+        width: 90%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text h3{
+        font-size: 20px;
+    }
+    .text h1{
+        font-size: 25px;
+    }
+
+
+
+    main h1{
+        display: none;
+    }
+    main h2{
+        text-align: center;
+    }
+
+
+    
+    .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dreapta{
+        width: 45%;
+        margin:0 0 5% 5%;
+    }
+    .stanga{
+        width: 45%;
+        margin:0 5% 5% 0;
+    }
+    #mail{
+        font-size: 15px;
+    }
+
+
+    .img img{
+        width: 100%;
+    }
+
+
+    
+}
+
+
+
+@media (min-width:1487px){
+
+    body{
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: auto;
+        grid-template-areas: "nav main"
+        "nav footer";
+        /* grid-gap:20px; */
+    }
+    .nav{
+        grid-area: nav;
+    }
+    main{
+        grid-area: main;
+    }
+
+    footer{
+        grid-area: footer;
+    }
+
+
+    .cutie{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: "img about";
+        grid-gap:20px;
+    }
+
+    .img{
+        grid-area: img;
+    }
+
+    .about{
+        grid-area: about;
+        font-size: 22px;
+        padding-right: 20px;
+    }
+
+
+
+
+
+
+
+    .details{
+        font-size: 20px;
+    }
+    .dreapta #mail{
+        font-size: 20px;
+    }
+
+    .details h3{
+        margin-top: 10%;
+    }
+
+    .nav{
+        background-color: #363636;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+       
+    }
+    .nav-content{
+        background-color:#363636;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    nav a{
+        margin-top:20% ;
+        font-size: 25px;
+        /* border: 2px solid red; */
+        /* padding: 5px 50px; */
+        width: 90%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text h3{
+        font-size: 20px;
+    }
+    .text h1{
+        font-size: 25px;
+    }
+
+
+
+    main h1{
+        display: none;
+    }
+    main h2{
+        text-align: center;
+    }
+
+
+    
+    .box{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dreapta{
+        width: 45%;
+        margin:0 0 5% 5%;
+    }
+    .stanga{
+        width: 45%;
+        margin:0 5% 5% 0;
+    }
+    #mail{
+        font-size: 15px;
+    }
+
+
+    .img img{
+        width: 100%;
+    }
+
+
+
+
+    
+
+}
