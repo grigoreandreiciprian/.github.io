@@ -3,92 +3,156 @@
 }
 
 body{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lekton', sans-serif;
+}
+body a{
+    text-decoration: none;
 }
 
-.nav{
-    display: none;
-}
-
-
-.landing{
-    width: 100%;
-    height: 80vh;
-    background-image: url("mountain.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.landcontent{
-    width: 90%;
-    margin-top: 10%;
-    /* border: 2px solid red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.landcontent img{
-    width: 70%;
-    border-radius: 130px;
-}
-.nume{
+nav{
+    /* background-color: #4c4d4d; */
+    color: white;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap:10px
 }
 
-.landcontent h1{
-    font-size: 30px;
+nav p{
+    font-size: 20px;
+    margin-left: 10%;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 1.2em;
     color: white;
-    margin-bottom: 5%;
+    margin-right: 10%;
 }
 
-.landcontent .nume h2{
-    font-size: 30px;
-    color: rgb(236, 33, 33);
-}
-
-.landcontent p{
+.social a{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-left: 10%;
     color: white;
-    font-size: 25px;
+    transition: .5s all ease-in-out;
 }
 
-.about{
+.social a:hover{
+   color: #604fdd;
+   transform: scale(1.2);
+}
+
+
+
+.welcome{
+    background-image: url("background2.jpg");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.shadow_box{
+    background-color:rgba(0,0,0,.66);
+    width: 100%;
+    height: 100vh;
+}
+
+.welcome_content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.welcome_content img{
+    width: 20%;
+    border-radius: 200px;
+    margin-top: 20%;
+}
+
+.welcome_content p{
+    margin: 0 0 2% 0;
+}
+
+
+
+
+
+
+
+.welcome_content a button{
+    padding: 10px 30px;
+    border-radius: 200px;
+    color: royalblue;
+    font-size: 1.3rem;
+    border: 3px solid royalblue;
+    background-color:rgba(0,0,0,.1);
+    font-weight: bolder;
+    transition: .5s all;
+}
+
+.welcome_content button:hover{
+    color: white;
+    background-color: royalblue;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: white;
+    margin-right: 10%;
+}
+
+.navBar a{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-left: 5%;
+    color: white;
+    font-size: 1.2em;
+    transition: .5s all ease-in-out;
+    position: relative;
+}
+
+.navBar a::before{
+    position: absolute;
+    width: 0%;
+    height: 5%;
+    content: "";
+    background-color: red;
+    top:80%;
+    left:0%;
+    transition: .5s all ease-in-out;
+
+}
+.navBar a:hover::before{
     width: 100%;
 }
-.about img{
-    width: 60%;
-}
-.about{
-    font-size: 25px;
-}
-
-.about button{
-    background-color: lightcoral;
-    padding: 10px 35px;
-    color: white;
-    font-size: 20px;
-}
 
 
-@media (min-width: 720px) and (max-width:900px){
-    .details{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-    #mail{
-        font-size: 22px;
-    }
+.navBar a:focus{
+    color: #604fdd;
 }
 
