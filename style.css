@@ -6,6 +6,7 @@ body{
     margin: 0px;
     padding: 0px;
     font-family: 'Lekton', sans-serif;
+    background-color: #eee;
 }
 body a{
     text-decoration: none;
@@ -16,7 +17,7 @@ nav{
 }
 
 .welcome{
-    background-image: url("background2.jpg");
+    background-image: url("/img/background2.jpg");
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,13 +25,13 @@ nav{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
 }
 
 .shadow_box{
     background-color:rgba(0,0,0,.66);
     width: 100%;
-    height: 100vh;
+    height: 80vh;
 }
 
 .welcome_content{
@@ -40,7 +41,7 @@ nav{
     justify-content: center;
     align-items: center;
     height: 80vh;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     max-width: 600px;
     margin: auto;
@@ -54,12 +55,13 @@ nav{
 
 .welcome_content p{
     margin: 0 0 2% 0;
-    font-size: 1.3em;
+    font-size:1.2em;
     width: 85%;
 }
 
 .welcome_content h2{
     width: 85%;
+    font-size: 1.2em;
 }
 
 
@@ -69,10 +71,11 @@ nav{
 
 
 .welcome_content a button{
-    padding: 10px 30px;
+    padding: 16px 50px;
     border-radius: 200px;
     color: royalblue;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-top: 5%;
     border: 3px solid royalblue;
     background-color:rgba(0,0,0,.1);
     font-weight: bolder;
@@ -129,15 +132,16 @@ nav{
 
 .bio{
     margin-left: 2%;
+    background-color: #eee;
 }
 
 .bio h2{
     color:#e65f78;
-    margin: 0px;
+    margin: 5% 0 0 0;
     font-size:30px;
 }
 
-#ab{
+.ab{
     font-weight: bolder;
     font-size: 40px;
     margin: 0px;
@@ -180,12 +184,169 @@ nav{
 
 .cv{
     padding: 10px 20px;
-    background-color: #e65f78;
+    background-color: #262626;
     color: white;
     font-size: 20px;
     margin-left: 2%;
+    position: relative;
+    transition: .3s all ease-in;
+    overflow: hidden;
 }
 
+.cv::before{
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    width: 100%;
+    height: 50px;
+
+    transform: translateX(-100%) rotate(45deg);
+
+    transition: all 0.3s;
+    background-color: white;
+}
+
+.cv:hover{
+    background-color:#e65f78
+}
+.cv:hover::before{
+    transform: translate(100%) rotate(45deg);
+}
+
+
+.services{
+    background-color: #eee;
+    color: black;
+}
+
+
+.services h2{
+    color:#e65f78;
+    margin: 5% 0 0 0;
+    font-size:30px;
+}
+
+.servicesCards{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 80%;
+    margin: auto;
+    font-size: 30px;
+}
+
+.servicesCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.servicesCard i{
+    padding: 50px;
+    font-size: 2.6rem;
+}
+
+.servicesCard h1{
+    margin: 0px;
+    font-size: 1.5rem;
+}
+.servicesCard p{
+    margin: 0px;
+    font-size: 1.2rem;
+}
+
+
+
+.skills{
+    background-color: #262626;
+    color: white;
+}
+
+
+.skills h2{
+    color:#e65f78;
+    margin: 5% 0 0 0;
+    font-size:30px;
+}
+
+.skills h3{
+    font-size: 2.2rem;
+}
+
+
+
+.progress{
+    background-color: white;
+}
+
+.progress p{
+    background-color:#604fdd;
+    font-size: 2rem;
+    color: white;
+    padding-left: 2%;
+}
+
+.html{
+    width: 95%;
+}
+
+.css{
+    width: 90%;
+}
+
+.java{
+    width: 50%;
+}
+
+.node{
+    width: 35%;
+}
+
+.react{
+    width: 20%;
+}
+
+
+.team{
+    width: 90%;
+}
+
+.creativity{
+    width: 50%;
+}
+
+.comunication{
+    width: 80%;
+}
+
+.dedication{
+    width: 100%;
+}
+
+.skills h3{
+    font-size: 1.8rem;
+}
+
+.skillsCards{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+
+
+.progress{
+    background-color: white;
+}
+
+.progress p{
+    background-color:#604fdd;
+    font-size: 1.2rem;
+    color: white;
+    padding-left: 2%;
+}
 
 
 
@@ -287,6 +448,32 @@ nav{
         margin-top: 5%;
     }
     
+
+    .skillsCards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap:100px;
+        width: 90%;
+        margin: auto;
+    }
+
+
+    .skills h3{
+        font-size: 1.8rem;
+    }
+    
+    
+    
+    .progress{
+        background-color: white;
+    }
+    
+    .progress p{
+        background-color:#604fdd;
+        font-size: 1.2rem;
+        color: white;
+        padding-left: 2%;
+    }
     
 }
 
@@ -461,6 +648,8 @@ nav p{
 .aboutContent{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    /* width: 90%; */
+    margin: auto;
 }
 
 #story{
@@ -483,6 +672,52 @@ nav p{
 .img img{
     width: 80%;
 }
+
+
+.servicesCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap:50px;
+    width: 90%;
+    font-size: 1.1rem;
+}
+
+.servicesCard p{
+    font-size: 1.1rem;
+}
+
+.servicesCard i{
+    padding: 20px;
+}
+
+
+
+.skillsCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:100px;
+    width: 90%;
+    margin: auto;
+}
+
+
+.skills h3{
+    font-size: 1.8rem;
+}
+
+
+
+.progress{
+    background-color: white;
+}
+
+.progress p{
+    background-color:#604fdd;
+    font-size: 1.2rem;
+    color: white;
+    padding-left: 2%;
+}
+
 
 }
 
